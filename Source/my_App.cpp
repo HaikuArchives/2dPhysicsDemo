@@ -10,7 +10,7 @@
 const float		OFFSET_X 	=	100;
 const float		OFFSET_Y	=	100;
 const float		BREITE 		=	400;
-const float		HOEHE		=	450;
+const float		HOEHE		=	470;
 
 
 my_App::my_App() : BApplication("application/x-vnd.2dPhysicsDemo")
