@@ -1,4 +1,9 @@
 #include 	"my_App.h"
+
+#include	<stdio.h>	// sprintf
+
+#include	<Alert.h>
+
 #include	"my_Window.h"
 #include	"my_BitView.h"
 
@@ -8,7 +13,7 @@ const float		BREITE 		=	400;
 const float		HOEHE		=	450;
 
 
-my_App::my_App() : BApplication('AKKA')
+my_App::my_App() : BApplication("application/x-vnd.2dPhysicsDemo")
 {
 	my_Window* win=new my_Window(BRect(OFFSET_X, OFFSET_Y, OFFSET_X+BREITE, OFFSET_Y+HOEHE)
 								,"2D Demo"

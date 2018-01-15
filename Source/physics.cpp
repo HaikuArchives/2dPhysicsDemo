@@ -28,6 +28,9 @@ physics.cpp - This file implements the 2D physics simulator.
 
 #include <assert.h>
 
+#include <GraphicsDefs.h>
+#include <Polygon.h>
+
 #include "physics.h"
 #include "iface.h"
 
@@ -171,7 +174,7 @@ simulation_world::simulation_world( real WorldWidth_, real WorldHeight_ ) :
 	InitializeBody(aBodies[1],Density,r(50),r(10),r(1));
 
 	aBodies[0].aConfigurations[0].CMVelocity = vector_2(r(40),r(10));
-	aBodies[0].aConfigurations[0].AngularVelocity = r(PI);
+	aBodies[0].aConfigurations[0].AngularVelocity = r(M_PI);
 
 	// initialize walls
 	aWalls[0].Normal = vector_2(r(0),r(-1));

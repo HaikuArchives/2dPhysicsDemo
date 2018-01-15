@@ -1,5 +1,7 @@
 #include "my_Window.h"
 
+#include <Application.h>
+
 
 my_Window::my_Window(BRect fFrame, const char *fTitel, window_type type, uint32 flags)
 					: BWindow(fFrame,fTitel, type, flags)
