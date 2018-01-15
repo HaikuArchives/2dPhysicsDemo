@@ -46,7 +46,8 @@ my_BitView::my_BitView(BRect rect, const char* name)
 	mBitsLength=mBitmap->BitsLength();
 	SetViewColor(B_TRANSPARENT_32_BIT);
 	view=mBack;
-	BView* cView=new BView(BRect(0,400,400,450),"control",B_FOLLOW_ALL, B_WILL_DRAW);
+	BView* cView = new BView(BRect(0, 400, 400, mHoehe), "control",
+		B_FOLLOW_ALL, B_WILL_DRAW);
 	cView->SetViewColor(220,220,220);
 	AddChild(cView);
 
@@ -73,25 +74,26 @@ my_BitView::my_BitView(BRect rect, const char* name)
 	mGravity = new BCheckBox(BRect(0,0,10,10),"mGravity","Gravity",msg3);
 	mGravity->GetPreferredSize(&width,&height);
 	mGravity->ResizeTo(width,height);
-	mGravity->MoveBy(100,5);
+	mGravity->MoveBy(120, 5);
 	cView->AddChild(mGravity);
 
 	mDamping = new BCheckBox(BRect(0,0,10,10),"mDamping","Damping",msg4);
 	mDamping->GetPreferredSize(&width,&height);
 	mDamping->ResizeTo(width,height);
-	mDamping->MoveBy(100,30);
+	mDamping->MoveBy(120, 30);
 	cView->AddChild(mDamping);
- 
-    mSlider = new BSlider(BRect(180,2,350,52), "mSlider", "Speed", msg5, 0, 100, B_TRIANGLE_THUMB);
-   	mSlider->SetBarColor(c_blue);
+
+	mSlider = new BSlider(BRect(220, 2, 300, 52), "mSlider", "Speed", msg5, 0,
+		100, B_TRIANGLE_THUMB);
+	mSlider->SetBarColor(c_blue);
     mSlider->SetHashMarks(B_HASH_MARKS_BOTTOM); 
     mSlider->SetHashMarkCount(5);	
 	mSlider->SetLimitLabels("Slow", "Fast");
 	mSlider->UseFillColor(true, &c_red);
 	cView->AddChild(mSlider);
-		
-	mInfoButton = new BButton(BRect(0,0,30,20),"infoButton","Info", msg6);	
-	mInfoButton->MoveBy(365,20);
+
+	mInfoButton = new BButton(BRect(0, 0, 50, 20), "infoButton", "Info", msg6);
+	mInfoButton->MoveBy(340, 20);
 	mInfoButton->SetTarget(be_app);
 	cView->AddChild(mInfoButton);
 		
