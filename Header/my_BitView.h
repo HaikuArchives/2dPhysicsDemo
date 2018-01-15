@@ -1,3 +1,7 @@
+#include <Button.h>
+#include <CheckBox.h>
+#include <Slider.h>
+
 #pragma once
 
 

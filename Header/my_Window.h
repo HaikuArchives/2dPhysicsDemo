@@ -1,3 +1,5 @@
+#include <Window.h>
+
 #pragma once
 
 class my_Window : public BWindow

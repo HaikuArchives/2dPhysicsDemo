@@ -1,4 +1,11 @@
 #include 	"my_BitView.h"
+
+#include	<string.h>	// memset
+
+#include	<Application.h>
+#include	<Bitmap.h>
+#include	<Window.h>
+
 #include 	"iface.h"
 
 #define		TOGGLE_WORLD_SPRING		'TGWS'
